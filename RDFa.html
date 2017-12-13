@@ -34,11 +34,13 @@ h4 {
 
 em {
   font-family: 'Playfair Display', serif;
-  color: #B27666;    
+  color: #B27666; 
+  font-size: 22px;
 }
 
 /* exanded */
 exp {
+  font-family: 'Playfair Display', serif;
   color: #6D6815;
 }
 
@@ -57,37 +59,45 @@ a {
   color: #1D7193;
   font-family: 'Playfair Display', serif;  
 }
+
+img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%
+}
+	  
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
 
 </script><tw-passagedata pid="1" name="RDF" tags="" position="1650,175">&lt;h1&gt;Resource Description Framework&lt;/h1&gt;
 
-Resource Description Framework (RDF) is a family of (link: &quot;W3C&quot;)[&lt;exp&gt;&lt;em&gt;W3C&lt;/em&gt;, the World Wide Web Consortium,&lt;/exp&gt;] specifications originally intended to serve as a general metadata model. These specifications are used for describing and modeling information in web resources.
+Resource Description Framework (RDF) is a family of (link: &quot;W3C&quot;)[&lt;exp&gt;&lt;em&gt;W3C&lt;/em&gt; (World Wide Web Consortium)&lt;/exp&gt;] specifications which originally developed as a general metadata model.  
 
-Data is everywhere but it is not always in a format that is easy to &lt;a target=&quot;_blank&quot;  href=&quot;http://linkeddatabook.com/editions/1.0/#htoc3&quot;&gt;&quot;discover, access, integrate, and use&quot;&lt;/a&gt;. RDF is part of a larger set of initiatives falling under &lt;em&gt;Linked Data&lt;/em&gt; seeking to standardize and improve the availability of data on the web, principally through Web APIs and user agents like web crawlers.
+Data on the web is not always easy to &lt;a target=&quot;_blank&quot;  href=&quot;http://linkeddatabook.com/editions/1.0/#htoc3&quot;&gt;&quot;discover, access, integrate, and use&quot;&lt;/a&gt;. RDF is part of a larger set of initiatives seeking to standardize and improve the availability of data on the web, principally through Web APIs and user agents like web crawlers. RDF is a technology used to publish (link: &quot;\&quot;Linked Data\&quot;.&quot;)[Linked Data. &lt;exp&gt;Linked Data is a method of exposing, sharing, and connecting data on the Semantic Web using HTTP Uniform Resource Identifiers (URIs) and RDF.&lt;/exp&gt;] 
 
-The RDF Linked Data model is based on the assertion of statements which take the form of &quot;triples&quot;. Just like very simple natural language sentences, these triple statements include a subject, a predicate, and an object. These data &quot;chunks&quot; are able to take the form of Uniform Resource Identifiers (URIs). In the case of objects, they can be URIs or data literals, &quot;strings&quot;. URIs assist in the tricky task of unambiguously asserting information in the form of statements, by allowing &lt;a target=&quot;_blank&quot; href=&quot;https://googleblog.blogspot.com/2012/05/introducing-knowledge-graph-things-not.html&quot;&gt;&quot;things&quot; to be pointed to instead of &quot;strings&quot;&lt;/a&gt;.
+The RDF data model is based on the assertion of statements which take the form of &quot;triples&quot;. Just like very simple natural language sentences, these triple statements include a subject, a predicate, and an object. The components of a triple statement are made up of URIs, or in the case of objects, they can be either URIs or data literals, &quot;strings&quot;. Referring to an object class or property by its URI instead of it&#x27;s natural language name assists us in the tricky task of unambiguously expressing information, since &lt;a target=&quot;_blank&quot; href=&quot;http://babelnet.org/synset?word=bn:00010720n&quot;&gt;&quot;things&quot;&lt;/a&gt; are referenced in place &lt;a target=&quot;_blank&quot; href=&quot;https://en.wikipedia.org/wiki/Buffalo_buffalo_Buffalo_buffalo_buffalo_buffalo_Buffalo_buffalo&quot;&gt;&quot;strings&quot;&lt;/a&gt;. 
 
-&lt;h3&gt;Triple statements allow knowledge to be represnted in the form of a graph. For example, consider how 1) and 2) represent the same information:&lt;/h3&gt;
+&lt;h3&gt;Triple statements can be chained together in order to form knowledge graphs. For example, consider how &lt;i&gt;1)&lt;/i&gt; and &lt;i&gt;2)&lt;/i&gt; represent the same information:&lt;/h3&gt;
 
-&lt;em&gt;1)&lt;/em&gt;
+&lt;h4&gt;1)&lt;/h&gt;
 
-&quot;There is a music group called Spoon.&quot;
+&lt;em&gt;&quot;There is a music group called Spoon.&quot;&lt;/em&gt;
 
-&lt;em&gt;2)&lt;/em&gt;
+&lt;h4&gt;2)&lt;/h4&gt;
 
 &lt;img src=&quot;spoon.png&quot;&gt;
 
-Here&#x27;s another example:
+&lt;h3&gt;Here&#x27;s another example:&lt;/h3&gt;
 
-&lt;em&gt;1)&lt;/em&gt;
-&quot;Richard Cyganiak is a person who is based in Berlin, a German city with a population of 3,405,259. Hamburg and Muenchen are also cities in Germany.&quot;
+&lt;h4&gt;1)&lt;/h4&gt;
 
-&lt;em&gt;2)&lt;/em&gt;
+&lt;em&gt;&quot;Richard Cyganiak is a person who is based in Berlin, a German city with a population of 3,405,259. Hamburg and Muenchen are also cities in Germany.&quot;&lt;/em&gt;
+
+&lt;h4&gt;2)&lt;/h4&gt;
 
 &lt;img src=&quot;cygri.gif&quot;&gt;
 
-And for good measure, here&#x27;s another:
+&lt;h3&gt;And for good measure, here&#x27;s another:&lt;/h3&gt;
 
 &lt;img src=&quot;example-graph.jpg&quot;&gt;
 
@@ -165,6 +175,8 @@ Look for the &lt;code&gt;property=&quot;..&quot;&lt;/code&gt; attributes in the 
 &lt;h2&gt;resource&lt;/h2&gt;
 
 You may want to describe more than one thing on your web page. &lt;em&gt;Resource attributes&lt;/em&gt; can be assigned to distinguish multiple resources on a page, similarly to how identifiers are assigned to parts of a page using the id attribute in HTML.
+
+See where &lt;code&gt;resource=&quot;#PetsRUs&quot;&lt;/code&gt; occurs in the example below.
 ] (link:&quot;&lt;h2&gt;prefix&lt;/h2&gt;&quot;)[
 &lt;h2&gt;prefix&lt;/h2&gt;
 
@@ -183,7 +195,7 @@ See &lt;code&gt;prefix=&quot;gr: http://purl.org/goodrelations/v1/&quot;&lt;/cod
 
 &lt;h3&gt;Now that we&#x27;ve briefly gone over the mechanics of RDFa, let&#x27;s take a closer look at [[vocabularies]].&lt;/h3&gt;</tw-passagedata><tw-passagedata pid="5" name="vocabularies" tags="" position="1600,850">&lt;h1&gt;Linked Data Vocabularies&lt;/h1&gt;
 
-There are numerous vocabularies and (link:&quot;ontologies&quot;)[&lt;em&gt;ontologies&lt;/em&gt;, more complex schemas for representing terms which accounts for hierarchical and other associative relationships between object classes&quot;,] available that can be used to semantically enrich web documents and other resources! These vocabularies offer terms for expressing both classes and properties.
+There are numerous vocabularies available to semantically enrich web resources! 
 
 There were two vocabularies used in the previous example: (link:&quot;schema.org&quot;)[
 
@@ -206,7 +218,7 @@ No matter what kind of data you want to describe on the web, it&#x27;s likely th
 
 </tw-passagedata><tw-passagedata pid="7" name="RDFa in HTML" tags="" position="1500,700">&lt;h1&gt;RDFa in HTML&lt;/h1&gt;
 
-This is a whirlwind tour of &lt;em&gt;RDFa&lt;/em&gt; in HTML meant to offer a small taste of why it exists, what it can do, and hopefully picque your interest to learn more. 
+This is a whirlwind tour of &lt;em&gt;RDFa&lt;/em&gt; in HTML meant to offer a small taste of why it exists, what it can do, and hopefully pique your interest to learn more. 
 
 This presentation will cover:
 &lt;ul&gt;
@@ -217,17 +229,31 @@ This presentation will cover:
 	&lt;li&gt;Linked Data Vocabularies&lt;/li&gt;
 &lt;/ul&gt;
 
-Let&#x27;s get started by first introducing [[RDF]].</tw-passagedata><tw-passagedata pid="8" name="resources" tags="" position="777,455">&lt;h1&gt;Resources&lt;h1&gt;
+Let&#x27;s get started by first introducing [[RDF]].</tw-passagedata><tw-passagedata pid="8" name="resources" tags="" position="777,455">&lt;h1&gt;Resources&lt;/h1&gt;
+
+Here&#x27;s a random collection of potentially useful links. It&#x27;s in no particular order at the moment.
 
 
-&lt;h2&gt;Specifications&lt;/h2&gt;
-Coming soon!
+&lt;a target=&quot;_blank&quot; href=&quot;http://patterns.dataincubator.org/book/&quot;&gt;http://patterns.dataincubator.org/book/ &lt;/a&gt;
+&lt;a target=&quot;_blank&quot; href=&quot;https://json-ld.org/&quot;&gt;https://json-ld.org/ &lt;/a&gt;
+&lt;a target=&quot;_blank&quot; href=&quot;https://www.w3.org/DesignIssues/LinkedData.html&quot;&gt;https://www.w3.org/DesignIssues/LinkedData.html &lt;/a&gt;
+&lt;a target=&quot;_blank&quot; href=&quot;http://ldodds.com/foaf/foaf-a-matic&quot;&gt;http://ldodds.com/foaf/foaf-a-matic &lt;/a&gt;
+&lt;a target=&quot;_blank&quot; href=&quot;https://developers.google.com/search/docs/guides/intro-structured-data&quot;&gt;https://developers.google.com/search/docs/guides/intro-structured-data &lt;/a&gt;
+&lt;a target=&quot;_blank&quot; href=&quot;http://lov.okfn.org/dataset/lov&quot;&gt;http://lov.okfn.org/dataset/lov &lt;/a&gt;
+&lt;a target=&quot;_blank&quot; href=&quot;https://www.w3.org/TR/rdfa-core/&quot;&gt;https://www.w3.org/TR/rdfa-core/ &lt;/a&gt;
+&lt;a target=&quot;_blank&quot; href=&quot;https://medium.com/metaphorical-web/how-structured-is-your-data-4e6fb25cba5a&quot;&gt;https://medium.com/metaphorical-web/how-structured-is-your-data-4e6fb25cba5a &lt;/a&gt;
+&lt;a target=&quot;_blank&quot; href=&quot;https://rdf-translator.appspot.com/&quot;&gt;https://rdf-translator.appspot.com/ &lt;/a&gt;
+&lt;a target=&quot;_blank&quot; href=&quot;https://www.w3.org/TR/rdfa-primer/&quot;&gt;https://www.w3.org/TR/rdfa-primer/ &lt;/a&gt;
+&lt;a target=&quot;_blank&quot; href=&quot;https://www.w3.org/TR/rdfa-lite/&quot;&gt;https://www.w3.org/TR/rdfa-lite/ &lt;/a&gt;
+&lt;a target=&quot;_blank&quot; href=&quot;https://www.w3.org/TR/rdfa-core/&quot;&gt;https://www.w3.org/TR/rdfa-core/ &lt;/a&gt;
+&lt;a target=&quot;_blank&quot; href=&quot;https://www.w3.org/TeamSubmission/turtle/&quot;&gt;https://www.w3.org/TeamSubmission/turtle/ &lt;/a&gt;
+&lt;a target=&quot;_blank&quot; href=&quot;https://rdf-translator.appspot.com/&quot;&gt;https://rdf-translator.appspot.com/ &lt;/a&gt;
+&lt;a target=&quot;_blank&quot; href=&quot;https://www.w3.org/RDF/Validator/&quot;&gt;https://www.w3.org/RDF/Validator/ &lt;/a&gt;
+&lt;a target=&quot;_blank&quot; href=&quot;https://project-open-data.cio.gov/v1.1/schema/&quot;&gt;https://project-open-data.cio.gov/v1.1/schema/ &lt;/a&gt;
+&lt;a target=&quot;_blank&quot; href=&quot;http://lov.okfn.org/dataset/lov/about&quot;&gt;http://lov.okfn.org/dataset/lov/about&quot; &lt;/a&gt;
 
-&lt;h2&gt;Tutorials&lt;/h2&gt;
-Coming soon!
 
-&lt;h2&gt;Cool Projects&lt;h2&gt;
-Coming soon!
+
 
 </tw-passagedata></tw-storydata>
 
